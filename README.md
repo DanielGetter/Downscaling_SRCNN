@@ -1,7 +1,7 @@
 # Downscaling_SRCNN
 
 
-ABSTRACT \n
+ABSTRACT               
 Machine learning models are frequently employed to perform either purely physics-free or hybrid downscaling of climate data. However, the majority of these implementations operate over relatively small downscaling factors of about 4--6x. This study examines the ability of convolutional neural networks (CNN) to downscale surface wind speed data from three different coarse resolutions (25km, 48km, and 100km side-length grid cells) to 3km and additionally focuses on the ability to recover subgrid-scale variability.
 Within each downscaling factor, namely 8x, 16x, and 32x, we consider models that produce fine-scale wind speed super-resolved predictions as functions of different input features: coarse wind fields only; coarse wind and fine-scale topography; and coarse wind, topography, and diurnal cycle in the form of a timestamp.
 Furthermore, we train one model at 25km to 3km resolution whose fine-scale outputs are probability density function parameters through which sample wind speeds can be generated. All CNN models save one outperform bicubic interpolation on out-of-sample data. Models with coarse wind and fine topography exhibit the best performance compared to other models operating across the same downscaling factor. Our timestamp encoding results in lower out-of-sample generalizability compared to other input configurations. Overall, the downscaling factor plays the largest role in model performance.
